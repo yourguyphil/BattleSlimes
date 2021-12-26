@@ -1,0 +1,187 @@
+{
+    "collector_id": "",
+    "name":  "",
+    "description": "",
+    "metadata": "",
+    "picture": ""
+}
+
+{
+    "collector_id": "00001",
+    "name":  "Blu",
+    "description": "",
+    "metadata": "",
+    "picture": "https://www.battleslimes.com/assets/images/BattleSlime0001.svg"
+}
+
+{
+    "collector_id": "0002",
+    "name":  "Spark",
+    "description": "",
+    "metadata": "",
+    "picture": "https://www.battleslimes.com/assets/images/BattleSlime0002.svg"
+}
+
+{
+    "collector_id": "0003",
+    "name":  "Appl3",
+    "description": "",
+    "metadata": "",
+    "picture": "https://www.battleslimes.com/assets/images/BattleSlime0003.svg"
+}
+
+{
+    "collector_id": "0004",
+    "name":  "B00",
+    "description": "",
+    "metadata": "",
+    "picture": "https://www.battleslimes.com/assets/images/BattleSlime0004.svg"
+}
+
+{
+    "collector_id": "0005",
+    "name":  "D3vil",
+    "description": "",
+    "metadata": "",
+    "picture": "https://www.battleslimes.com/assets/images/BattleSlime0005.svg"
+}
+
+{
+    "collector_id": "0006",
+    "name":  "Shine",
+    "description": "",
+    "metadata": "",
+    "picture": "https://www.battleslimes.com/assets/images/BattleSlime0006.svg"
+}
+
+{
+    "collector_id": "0007",
+    "name":  "",
+    "description": "",
+    "metadata": "",
+    "picture": "https://www.battleslimes.com/assets/images/BattleSlime0007.svg"
+}
+
+{
+    "collector_id": "0008",
+    "name":  "",
+    "description": "",
+    "metadata": "",
+    "picture": "https://www.battleslimes.com/assets/images/BattleSlime0008.svg"
+}
+
+{
+    "collector_id": "0009",
+    "name":  "",
+    "description": "",
+    "metadata": "",
+    "picture": "https://www.battleslimes.com/assets/images/BattleSlime0009.svg"
+}
+
+{
+    "collector_id": "0010",
+    "name":  "",
+    "description": "",
+    "metadata": "",
+    "picture": "https://www.battleslimes.com/assets/images/BattleSlime0010.svg"
+}
+
+{
+    "collector_id": "0011",
+    "name":  "",
+    "description": "",
+    "metadata": "",
+    "picture": "https://www.battleslimes.com/assets/images/BattleSlime0011.svg"
+}
+
+{
+    "collector_id": "0012",
+    "name":  "",
+    "description": "",
+    "metadata": "",
+    "picture": "https://www.battleslimes.com/assets/images/BattleSlime0012.svg"
+}
+
+{
+    "collector_id": "0013",
+    "name":  "",
+    "description": "",
+    "metadata": "",
+    "picture": "https://www.battleslimes.com/assets/images/BattleSlime0013.svg"
+}
+
+{
+    "collector_id": "0014",
+    "name":  "",
+    "description": "",
+    "metadata": "",
+    "picture": "https://www.battleslimes.com/assets/images/BattleSlime0014.svg"
+}
+
+{
+    "collector_id": "0015",
+    "name":  "",
+    "description": "",
+    "metadata": "",
+    "picture": "https://www.battleslimes.com/assets/images/BattleSlime0015.svg"
+}
+
+{
+    "collector_id": "0016",
+    "name":  "",
+    "description": "",
+    "metadata": "",
+    "picture": "https://www.battleslimes.com/assets/images/BattleSlime0016.svg"
+}
+
+{
+    "collector_id": "0017",
+    "name":  "",
+    "description": "",
+    "metadata": "",
+    "picture": "https://www.battleslimes.com/assets/images/BattleSlime0017.svg"
+}
+
+{
+    "collector_id": "0018",
+    "name":  "",
+    "description": "",
+    "metadata": "",
+    "picture": "https://www.battleslimes.com/assets/images/BattleSlime0018.svg"
+}
+
+{
+    "collector_id": "0019",
+    "name":  "",
+    "description": "",
+    "metadata": "",
+    "picture": "https://www.battleslimes.com/assets/images/BattleSlime0019.svg"
+}
+
+{
+    "collector_id": "0020",
+    "name":  "",
+    "description": "",
+    "metadata": "",
+    "picture": "https://www.battleslimes.com/assets/images/BattleSlime0020.svg"
+}
+
+{
+    "slimes": [
+        {
+            "collector_id": "0001",
+            "name":  "Blu",
+            "description": "",
+            "metadata": "",
+            "picture": ""
+        },
+        {
+            "collector_id": "0002",
+            "name":  "",
+            "description": "",
+            "metadata": "",
+            "picture": ""
+        },
+
+    ]
+}
