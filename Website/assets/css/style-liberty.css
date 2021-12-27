@@ -22237,7 +22237,7 @@ h5.texti {
   height: 500px;
   background: url('../images/AnimatedMascot-Sheet.svg') left center;
   background-size: cover;
-  animation: play 1.5s steps(4) infinite;
+  animation: play 1.0s steps(4) infinite;
   display: inline-block;
 }
 

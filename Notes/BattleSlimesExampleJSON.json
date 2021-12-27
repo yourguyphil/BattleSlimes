@@ -1,5 +1,5 @@
 {
-    "collector_id": "",
+    "collector_number": "",
     "name":  "",
     "description": "",
     "metadata": "",
@@ -7,176 +7,216 @@
 }
 
 {
-    "collector_id": "00001",
+    "collector_number": "1",
     "name":  "Blu",
     "description": "",
     "metadata": "",
-    "picture": "https://www.battleslimes.com/assets/images/BattleSlime0001.svg"
+    "picture": "https://storage.googleapis.com/battleslimes_bucket/assets/images/slimecollection/BattleSlime1.svg"
 }
 
 {
-    "collector_id": "0002",
+    "collector_number": "2",
     "name":  "Spark",
     "description": "",
     "metadata": "",
-    "picture": "https://www.battleslimes.com/assets/images/BattleSlime0002.svg"
+    "picture": "https://storage.googleapis.com/battleslimes_bucket/assets/images/slimecollection/BattleSlime2.svg"
 }
 
 {
-    "collector_id": "0003",
-    "name":  "Appl3",
+    "collector_number": "3",
+    "name":  "Apple",
     "description": "",
     "metadata": "",
-    "picture": "https://www.battleslimes.com/assets/images/BattleSlime0003.svg"
+    "picture": "https://storage.googleapis.com/battleslimes_bucket/assets/images/slimecollection/BattleSlime3.svg"
 }
 
 {
-    "collector_id": "0004",
-    "name":  "B00",
+    "collector_number": "4",
+    "name":  "Boo",
     "description": "",
     "metadata": "",
-    "picture": "https://www.battleslimes.com/assets/images/BattleSlime0004.svg"
+    "picture": "https://storage.googleapis.com/battleslimes_bucket/assets/images/slimecollection/BattleSlime4.svg"
 }
 
 {
-    "collector_id": "0005",
-    "name":  "D3vil",
+    "collector_number": "5",
+    "name":  "Devil",
     "description": "",
     "metadata": "",
-    "picture": "https://www.battleslimes.com/assets/images/BattleSlime0005.svg"
+    "picture": "https://storage.googleapis.com/battleslimes_bucket/assets/images/slimecollection/BattleSlime5.svg"
 }
 
 {
-    "collector_id": "0006",
+    "collector_number": "6",
+    "name":  "Poo",
+    "description": "",
+    "metadata": "",
+    "picture": "https://storage.googleapis.com/battleslimes_bucket/assets/images/slimecollection/BattleSlime6.svg"
+}
+
+{
+    "collector_number": "7",
+    "name":  "Fae",
+    "description": "",
+    "metadata": "",
+    "picture": "https://storage.googleapis.com/battleslimes_bucket/assets/images/slimecollection/BattleSlime7.svg"
+}
+
+{
+    "collector_number": "8",
+    "name":  "Shark",
+    "description": "",
+    "metadata": "",
+    "picture": "https://storage.googleapis.com/battleslimes_bucket/assets/images/slimecollection/BattleSlime8.svg"
+}
+
+{
+    "collector_number": "9",
+    "name":  "Sprout",
+    "description": "",
+    "metadata": "",
+    "picture": "https://storage.googleapis.com/battleslimes_bucket/assets/images/slimecollection/BattleSlime9.svg"
+}
+
+{
+    "collector_number": "10",
+    "name":  "Wurm",
+    "description": "",
+    "metadata": "",
+    "picture": "https://storage.googleapis.com/battleslimes_bucket/assets/images/slimecollection/BattleSlime10.svg"
+}
+
+{
+    "collector_number": "11",
+    "name":  "Bat",
+    "description": "",
+    "metadata": "",
+    "picture": "https://storage.googleapis.com/battleslimes_bucket/assets/images/slimecollection/BattleSlime11.svg"
+}
+
+{
+    "collector_number": "12",
+    "name":  "Rex",
+    "description": "",
+    "metadata": "",
+    "picture": "https://storage.googleapis.com/battleslimes_bucket/assets/images/slimecollection/BattleSlime12.svg"
+}
+
+{
+    "collector_number": "13",
+    "name":  "Ron",
+    "description": "",
+    "metadata": "",
+    "picture": "https://storage.googleapis.com/battleslimes_bucket/assets/images/slimecollection/BattleSlime13.svg"
+}
+
+{
+    "collector_number": "14",
+    "name":  "Darky",
+    "description": "",
+    "metadata": "",
+    "picture": "https://storage.googleapis.com/battleslimes_bucket/assets/images/slimecollection/BattleSlime14.svg"
+}
+
+{
+    "collector_number": "15",
+    "name":  "Wim",
+    "description": "",
+    "metadata": "",
+    "picture": "https://storage.googleapis.com/battleslimes_bucket/assets/images/slimecollection/BattleSlime15.svg"
+}
+
+{
+    "collector_number": "16",
+    "name":  "Trub",
+    "description": "",
+    "metadata": "",
+    "picture": "https://storage.googleapis.com/battleslimes_bucket/assets/images/slimecollection/BattleSlime16.svg"
+}
+
+{
+    "collector_number": "17",
     "name":  "Shine",
     "description": "",
     "metadata": "",
-    "picture": "https://www.battleslimes.com/assets/images/BattleSlime0006.svg"
+    "picture": "https://storage.googleapis.com/battleslimes_bucket/assets/images/slimecollection/BattleSlime17.svg"
 }
 
 {
-    "collector_id": "0007",
-    "name":  "",
+    "collector_number": "18",
+    "name":  "Grog",
     "description": "",
     "metadata": "",
-    "picture": "https://www.battleslimes.com/assets/images/BattleSlime0007.svg"
+    "picture": "https://storage.googleapis.com/battleslimes_bucket/assets/images/slimecollection/BattleSlime18.svg"
 }
 
 {
-    "collector_id": "0008",
-    "name":  "",
+    "collector_number": "19",
+    "name":  "Rainbow",
     "description": "",
     "metadata": "",
-    "picture": "https://www.battleslimes.com/assets/images/BattleSlime0008.svg"
+    "picture": "https://storage.googleapis.com/battleslimes_bucket/assets/images/slimecollection/BattleSlime19.svg"
 }
 
 {
-    "collector_id": "0009",
-    "name":  "",
+    "collector_number": "20",
+    "name":  "Blu(S)",
     "description": "",
     "metadata": "",
-    "picture": "https://www.battleslimes.com/assets/images/BattleSlime0009.svg"
+    "picture": "https://storage.googleapis.com/battleslimes_bucket/assets/images/slimecollection/BattleSlime20.svg"
 }
 
 {
-    "collector_id": "0010",
-    "name":  "",
+    "collector_number": "21",
+    "name":  "Spark(S)",
     "description": "",
     "metadata": "",
-    "picture": "https://www.battleslimes.com/assets/images/BattleSlime0010.svg"
+    "picture": "https://storage.googleapis.com/battleslimes_bucket/assets/images/slimecollection/BattleSlime21.svg"
 }
 
 {
-    "collector_id": "0011",
-    "name":  "",
+    "collector_number": "22",
+    "name":  "Apple(S)",
     "description": "",
     "metadata": "",
-    "picture": "https://www.battleslimes.com/assets/images/BattleSlime0011.svg"
+    "picture": "https://storage.googleapis.com/battleslimes_bucket/assets/images/slimecollection/BattleSlime22.svg"
 }
 
 {
-    "collector_id": "0012",
-    "name":  "",
+    "collector_number": "23",
+    "name":  "Bat(S)",
     "description": "",
     "metadata": "",
-    "picture": "https://www.battleslimes.com/assets/images/BattleSlime0012.svg"
+    "picture": "https://storage.googleapis.com/battleslimes_bucket/assets/images/slimecollection/BattleSlime23.svg"
 }
 
 {
-    "collector_id": "0013",
-    "name":  "",
+    "collector_number": "24",
+    "name":  "Devil(S)",
     "description": "",
     "metadata": "",
-    "picture": "https://www.battleslimes.com/assets/images/BattleSlime0013.svg"
+    "picture": "https://storage.googleapis.com/battleslimes_bucket/assets/images/slimecollection/BattleSlime24.svg"
 }
 
 {
-    "collector_id": "0014",
-    "name":  "",
+    "collector_number": "25",
+    "name":  "Fae(S)",
     "description": "",
     "metadata": "",
-    "picture": "https://www.battleslimes.com/assets/images/BattleSlime0014.svg"
-}
-
-{
-    "collector_id": "0015",
-    "name":  "",
-    "description": "",
-    "metadata": "",
-    "picture": "https://www.battleslimes.com/assets/images/BattleSlime0015.svg"
-}
-
-{
-    "collector_id": "0016",
-    "name":  "",
-    "description": "",
-    "metadata": "",
-    "picture": "https://www.battleslimes.com/assets/images/BattleSlime0016.svg"
-}
-
-{
-    "collector_id": "0017",
-    "name":  "",
-    "description": "",
-    "metadata": "",
-    "picture": "https://www.battleslimes.com/assets/images/BattleSlime0017.svg"
-}
-
-{
-    "collector_id": "0018",
-    "name":  "",
-    "description": "",
-    "metadata": "",
-    "picture": "https://www.battleslimes.com/assets/images/BattleSlime0018.svg"
-}
-
-{
-    "collector_id": "0019",
-    "name":  "",
-    "description": "",
-    "metadata": "",
-    "picture": "https://www.battleslimes.com/assets/images/BattleSlime0019.svg"
-}
-
-{
-    "collector_id": "0020",
-    "name":  "",
-    "description": "",
-    "metadata": "",
-    "picture": "https://www.battleslimes.com/assets/images/BattleSlime0020.svg"
+    "picture": "https://storage.googleapis.com/battleslimes_bucket/assets/images/slimecollection/BattleSlime25.svg"
 }
 
 {
     "slimes": [
         {
-            "collector_id": "0001",
+            "collector_number": "1",
             "name":  "Blu",
             "description": "",
             "metadata": "",
             "picture": ""
         },
         {
-            "collector_id": "0002",
+            "collector_number": "2",
             "name":  "",
             "description": "",
             "metadata": "",
