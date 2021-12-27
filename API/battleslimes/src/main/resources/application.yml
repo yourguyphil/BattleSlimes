@@ -1,0 +1,6 @@
+spring:
+  profiles:
+    active: "dev"
+
+mongo:
+  connectionUri: 'INSERT CONNECTION URI HERE'
