@@ -1,5 +1,5 @@
 syntax = "proto3";
-option java_package = "com.battleslimes.battleslimes.services";
+option java_package = "com.battleslimes.battleslimes.com.battleslimes.battleslimes.services";
 
 import "google/protobuf/empty.proto";
 import "google/api/annotations.proto";
@@ -62,8 +62,10 @@ message Slime {
   string description = 3;
   // metadata, Technical Details of the Slime TBD
   string metadata = 4;
-  // picture, link to picture on grp
+  // picture, link to picture on GCP
   string picture = 5;
+  // opensea_url, URl to opensea for NFT
+  string opensea_url = 6;
 }
 
 message SlimeCollection {

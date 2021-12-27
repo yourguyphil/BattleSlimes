@@ -31,6 +31,7 @@ def protocVersion = protobufVersion
 dependencies {
 
 	//gRPC
+	implementation "net.devh:grpc-spring-boot-starter:2.11.0.RELEASE"
 	implementation "io.grpc:grpc-protobuf:${grpcVersion}"
 	implementation "io.grpc:grpc-stub:${grpcVersion}"
 
