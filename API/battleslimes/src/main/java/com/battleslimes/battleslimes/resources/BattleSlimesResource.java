@@ -24,17 +24,25 @@ public class BattleSlimesResource extends BattleSlimeServiceGrpc.BattleSlimeServ
 
     @Override
     public void getSlime(BattleSlimes.GetSlimeRequest request, StreamObserver<BattleSlimes.Slime> responseObserver) {
-        var battleSlime = battleSlimeService.getSlime(request.getCollectorNumber());
+        try {
+            var battleSlime = battleSlimeService.getSlime(request.getCollectorNumber());
 
-        responseObserver.onNext(battleSlime);
-        responseObserver.onCompleted();
+            responseObserver.onNext(battleSlime);
+            responseObserver.onCompleted();
+        } catch(Exception e) {
+            responseObserver.onError(e);
+        }
     }
 
     @Override
     public void getRandomSlime(Empty request, StreamObserver<BattleSlimes.Slime> responseObserver) {
-        var battleSlime = battleSlimeService.getRandomSlime();
+        try {
+            var battleSlime =  battleSlimeService.getRandomSlime();
 
-        responseObserver.onNext(battleSlime);
-        responseObserver.onCompleted();
+            responseObserver.onNext(battleSlime);
+            responseObserver.onCompleted();
+        } catch(Exception e) {
+            responseObserver.onError(e);
+        }
     }
 }

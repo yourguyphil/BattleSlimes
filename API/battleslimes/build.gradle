@@ -61,7 +61,7 @@ dependencies {
 
 	//MISC
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-
+	implementation 'org.jetbrains:annotations:19.0.0'
 	implementation 'com.google.cloud.tools:appengine-gradle-plugin:2.4.1'
 }
 
