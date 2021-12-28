@@ -6,11 +6,11 @@ import "google/api/annotations.proto";
 
 service BattleSlimeService {
   /*
-   Get a list of all BattleSlimes
+   Gets a list of all BattleSlimes.
 
-   Returns: A repeated list of slimes models. The list is sorted by collection id and versioned based on collection realeases.
+   Returns: A repeated list of slimes models.
 
-   Permission Level: Read
+   **Permission Level: Read**
   */
   rpc GetSlimes(google.protobuf.Empty) returns (SlimeCollection) {
     option (google.api.http) = {
@@ -19,11 +19,11 @@ service BattleSlimeService {
   };
 
   /*
-   Retrieve a slime by collector ID
+   Retrieve a slime by collector ID.
 
    Returns: A single default slime model
 
-   Permission Level: Read
+   **Permission Level: Read**
   */
   rpc GetSlime(GetSlimeRequest) returns (Slime) {
     option (google.api.http) = {
@@ -32,15 +32,15 @@ service BattleSlimeService {
   };
 
   /*
-    Retrieve a random slime
+    Retrieve a random slime.
 
     Returns: A single default slime model
 
-    Permission Level: Read
+    **Permission Level: Read**
   */
   rpc GetRandomSlime(google.protobuf.Empty) returns (Slime) {
     option (google.api.http) = {
-      get: "/v1/slime/random"
+      get: "/v1/randomslime"
     };
   };
 }
@@ -54,26 +54,26 @@ service BattleSlimeService {
 Default slime model  
  */
 message Slime {
-  // collector_number, Unique identifier of a slime. String of length 4. Range 0000 -> 9999
+  // Unique identifier number of a BattleSlime
   string collector_number = 1;
-  // name, Unique name of the BattleSlime
+  // Unique name of the BattleSlime
   string name = 2;
-  // description, Describes background the BattleSlime 
+  // Describes background the BattleSlime
   string description = 3;
-  // metadata, Technical Details of the Slime TBD
+  // Technical Details of the Slime TBD
   string metadata = 4;
-  // picture, link to picture on GCP
+  // URl to picture on GCP
   string picture = 5;
-  // opensea_url, URl to opensea for NFT
+  // URl to opensea for NFT
   string opensea_url = 6;
 }
 
 message SlimeCollection {
-  // Numerous default slimes 
+  // Numerous default slimes (See `Slime` for more information)
   repeated Slime slimes = 1;
 }
 
 message GetSlimeRequest {
-  // collector_number, see definition in Slime
+  // See definition in Slime for more information
   string collector_number = 1;
 }

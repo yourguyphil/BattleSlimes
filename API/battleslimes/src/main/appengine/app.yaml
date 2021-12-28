@@ -1,0 +1,6 @@
+runtime: java11 # or another supported version
+env: standard
+
+handlers:
+  - url: /.*
+    script: auto

@@ -1,3 +1,15 @@
+buildscript {
+	repositories {
+		maven { url 'https://maven.fabric.io/public' }
+	}
+
+	// move it here
+	dependencies {
+		classpath 'com.google.cloud.tools:appengine-gradle-plugin:2.+'
+	}
+
+}
+
 plugins {
 	id 'org.springframework.boot' version '2.7.0-SNAPSHOT'
 	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
@@ -7,9 +19,12 @@ plugins {
 	id 'idea'
 }
 
+apply plugin: "com.google.cloud.tools.appengine-appyaml"
+apply plugin: "com.google.cloud.tools.appengine"
+
 group = 'com.battleslimes'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '17'
+sourceCompatibility = '11'
 
 configurations {
 	compileOnly {
@@ -18,6 +33,7 @@ configurations {
 }
 
 repositories {
+	gradlePluginPortal()
 	mavenCentral()
 	mavenLocal()
 	maven { url 'https://repo.spring.io/milestone' }
@@ -44,6 +60,8 @@ dependencies {
 
 	//MISC
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+	implementation 'com.google.cloud.tools:appengine-gradle-plugin:2.4.1'
 }
 
 protobuf {
