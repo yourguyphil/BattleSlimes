@@ -2,36 +2,41 @@ package com.battleslimes.battleslimes.resources;
 
 import com.battleslimes.battleslimes.com.battleslimes.battleslimes.services.BattleSlimeServiceGrpc;
 import com.battleslimes.battleslimes.com.battleslimes.battleslimes.services.BattleSlimes;
+import com.battleslimes.battleslimes.services.BattleSlimeService;
 import com.google.protobuf.Empty;
 import io.grpc.stub.StreamObserver;
 import net.devh.boot.grpc.server.service.GrpcService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.stereotype.Component;
 
 @GrpcService
 public class BattleSlimesResource extends BattleSlimeServiceGrpc.BattleSlimeServiceImplBase {
+
+    @Autowired
+    private BattleSlimeService battleSlimeService;
+
     @Override
     public void getSlimes(Empty request, StreamObserver<BattleSlimes.SlimeCollection> responseObserver) {
-        BattleSlimes.Slime blu = BattleSlimes.Slime
-                .newBuilder()
-                .setCollectorNumber("1")
-                .setName("Blu")
-                .setPicture("INSERT PICTURE OF BLU")
-                .build();
+        var battleSlimeCollection = battleSlimeService.getAllSlimes();
 
-        BattleSlimes.SlimeCollection response = BattleSlimes.SlimeCollection
-                .newBuilder()
-                .addSlimes(blu)
-                .build();
-        responseObserver.onNext(response);
+        responseObserver.onNext(battleSlimeCollection);
         responseObserver.onCompleted();
     }
 
     @Override
     public void getSlime(BattleSlimes.GetSlimeRequest request, StreamObserver<BattleSlimes.Slime> responseObserver) {
-        super.getSlime(request, responseObserver);
+        var battleSlime = battleSlimeService.getSlime(request.getCollectorNumber());
+
+        responseObserver.onNext(battleSlime);
+        responseObserver.onCompleted();
     }
 
     @Override
     public void getRandomSlime(Empty request, StreamObserver<BattleSlimes.Slime> responseObserver) {
-        super.getRandomSlime(request, responseObserver);
+        var battleSlime = battleSlimeService.getRandomSlime();
+
+        responseObserver.onNext(battleSlime);
+        responseObserver.onCompleted();
     }
 }
