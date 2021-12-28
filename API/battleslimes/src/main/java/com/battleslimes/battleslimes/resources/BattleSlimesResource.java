@@ -1,7 +1,7 @@
 package com.battleslimes.battleslimes.resources;
 
-import com.battleslimes.battleslimes.com.battleslimes.battleslimes.services.BattleSlimeServiceGrpc;
-import com.battleslimes.battleslimes.com.battleslimes.battleslimes.services.BattleSlimes;
+import com.battleslimes.battleslimes.services.BattleSlimeServiceGrpc;
+import com.battleslimes.battleslimes.services.BattleSlimes;
 import com.battleslimes.battleslimes.services.BattleSlimeService;
 import com.google.protobuf.Empty;
 import io.grpc.stub.StreamObserver;

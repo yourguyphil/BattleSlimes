@@ -1,6 +1,6 @@
 package com.battleslimes.battleslimes.services;
 
-import com.battleslimes.battleslimes.com.battleslimes.battleslimes.services.BattleSlimes;
+import com.battleslimes.battleslimes.services.BattleSlimes;
 import com.battleslimes.battleslimes.db.MongoDBConnection;
 import com.mongodb.client.MongoCursor;
 import lombok.extern.slf4j.Slf4j;
