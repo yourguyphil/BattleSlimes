@@ -2,18 +2,14 @@ package com.battleslimes.battleslimes.services;
 
 import com.battleslimes.battleslimes.com.battleslimes.battleslimes.services.BattleSlimes;
 import com.battleslimes.battleslimes.db.MongoDBConnection;
-import com.mongodb.DBObject;
 import com.mongodb.client.MongoCursor;
 import lombok.extern.slf4j.Slf4j;
+import models.SlimeCollectionKeyNames;
 import org.bson.Document;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
 import static com.mongodb.client.model.Filters.eq;
 import java.util.Random;
-
-
-import java.util.List;
 
 @Service
 @Slf4j
@@ -32,12 +28,12 @@ public class BattleSlimeService {
                 Document documentOn = cursor.next();
                 BattleSlimes.Slime currentSlime = BattleSlimes.Slime
                         .newBuilder()
-                        .setCollectorNumber(documentOn.get("collector_number") != null ? documentOn.get("collector_number").toString() :  "")
-                        .setName(documentOn.get("name") != null ? documentOn.get("name").toString() :  "")
-                        .setDescription(documentOn.get("description") != null ? documentOn.get("description").toString() :  "")
-                        .setMetadata(documentOn.get("metadata") != null ? documentOn.get("metadata").toString() :  "")
-                        .setPicture(documentOn.get("picture") != null ? documentOn.get("picture").toString() :  "")
-                        .setOpenseaUrl(documentOn.get("opensea_url") != null ? documentOn.get("opensea_url").toString() :  "")
+                        .setCollectorNumber(getStringValueDefaultEmpty(documentOn, SlimeCollectionKeyNames.COLLECTOR_NUMBER))
+                        .setName(getStringValueDefaultEmpty(documentOn, SlimeCollectionKeyNames.NAME))
+                        .setDescription(getStringValueDefaultEmpty(documentOn, SlimeCollectionKeyNames.DESCRIPTION))
+                        .setMetadata(getStringValueDefaultEmpty(documentOn, SlimeCollectionKeyNames.METADATA))
+                        .setPicture(getStringValueDefaultEmpty(documentOn, SlimeCollectionKeyNames.PICTURE))
+                        .setOpenseaUrl(getStringValueDefaultEmpty(documentOn, SlimeCollectionKeyNames.OPENSEA_URL))
                         .build();
 
                 slimeCollectionBuilder.addSlimes(currentSlime);
@@ -49,17 +45,28 @@ public class BattleSlimeService {
         return slimeCollectionBuilder.build();
     }
 
+    //Unit Testable
+    private String getStringValueDefaultEmpty(Document document, String keyName) {
+        var value = document.get(keyName);
+
+        if(value == null){
+            log.error(keyName + " in slime document: " + document.getObjectId("_id").toHexString());
+        }
+
+        return String.valueOf(value);
+    }
+
     public BattleSlimes.Slime getSlime(String collector_number) {
-        var slimeFound = (Document) mongoDBConnection.getSlimesCollection().find(eq("collector_number", collector_number)).first();
+        var documentFound = (Document) mongoDBConnection.getSlimesCollection().find(eq("collector_number", collector_number)).first();
 
         BattleSlimes.Slime returnSlime = BattleSlimes.Slime
                 .newBuilder()
-                .setCollectorNumber(slimeFound.get("collector_number") != null ? slimeFound.get("collector_number").toString() :  "")
-                .setName(slimeFound.get("name") != null ? slimeFound.get("name").toString() :  "")
-                .setDescription(slimeFound.get("description") != null ? slimeFound.get("description").toString() :  "")
-                .setMetadata(slimeFound.get("metadata") != null ? slimeFound.get("metadata").toString() :  "")
-                .setPicture(slimeFound.get("picture") != null ? slimeFound.get("picture").toString() :  "")
-                .setOpenseaUrl(slimeFound.get("opensea_url") != null ? slimeFound.get("opensea_url").toString() :  "")
+                .setCollectorNumber(getStringValueDefaultEmpty(documentFound, SlimeCollectionKeyNames.COLLECTOR_NUMBER))
+                .setName(getStringValueDefaultEmpty(documentFound, SlimeCollectionKeyNames.NAME))
+                .setDescription(getStringValueDefaultEmpty(documentFound, SlimeCollectionKeyNames.DESCRIPTION))
+                .setMetadata(getStringValueDefaultEmpty(documentFound, SlimeCollectionKeyNames.METADATA))
+                .setPicture(getStringValueDefaultEmpty(documentFound, SlimeCollectionKeyNames.PICTURE))
+                .setOpenseaUrl(getStringValueDefaultEmpty(documentFound, SlimeCollectionKeyNames.OPENSEA_URL))
                 .build();
 
         return returnSlime;
