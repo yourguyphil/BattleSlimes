@@ -1,0 +1,98 @@
+info:
+  title: BattleSlimes
+  description: ''
+  version: '1'
+host: "echo-api.endpoints.battleslimes.cloud.goog"
+x-google-endpoints:
+- name: "echo-api.endpoints.battleslimes.cloud.goog"
+  target: "35.239.184.105"
+paths:
+  /v1/slimes:
+    get:
+      operationId: BattleSlimeService.GetSlimes
+      description: |-
+        Gets a list of all BattleSlimes.
+
+        Returns: A repeated list of slimes models.
+
+        *Permission Level: Read*
+      responses:
+        '200':
+          description: ''
+          schema:
+            $ref: '#/definitions/SlimeCollection'
+      parameters: []
+      produces:
+        - application/octet-stream
+  /v1/slime/{collector_id}:
+    get:
+      operationId: BattleSlimeService.GetSlime
+      description: |-
+        Retrieve a slime by collector ID.
+
+        Returns: A single default slime model
+
+        *Permission Level: Read*
+      parameters:
+        - in: path
+          name: collector_id
+          required: true
+          description: Unique collector ID of a sime
+          type: integer
+      responses:
+        '200':
+          description: ''
+          schema:
+            $ref: '#/definitions/Slime'
+      produces:
+        - application/octet-stream
+  /v1/randomslime:
+    get:
+      operationId: BattleSlimeService.GetRandomSlime
+      description: |-
+        Retrieve a random slime.
+
+        Returns: A single default slime model
+
+        *Permission Level: Read*
+      responses:
+        '200':
+          description: ''
+          schema:
+            $ref: '#/definitions/Slime'
+      parameters: []
+      produces:
+        - application/octet-stream
+swagger: '2.0'
+definitions:
+  Slime:
+    type: object
+    properties:
+      collector_number:
+        type: string
+        description: Unique identifier number of a BattleSlime
+      name:
+        type: string
+        description: Unique name of the BattleSlime
+      description:
+        type: string
+        description: Describes background the BattleSlime
+      metadata:
+        type: string
+        description: Technical Details of the Slime TBD
+      picture:
+        type: string
+        description: URl to picture on GCP
+      opensea_url:
+        type: string
+        description: URl to opensea for NFT
+    description: Default slime model
+  SlimeCollection:
+    type: object
+    properties:
+      slimes:
+        type: array
+        items:
+          $ref: '#/definitions/Slime'
+        description: Numerous default slimes (See `Slime` for more information)
+x-components: {}
