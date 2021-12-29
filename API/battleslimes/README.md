@@ -9,7 +9,6 @@ grpcui -proto BattleSlimes.proto -plaintext localhost:9090
 
 # Calling the service on server
 
-On GCP:
 `grpcui -plaintext 35.239.184.105:80`
 
 or
