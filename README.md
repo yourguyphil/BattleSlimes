@@ -93,9 +93,9 @@ Just some notable highlights!
 <!-- GETTING STARTED -->
 ## Getting Started
 
-`API` is where you will find additional API documentation and the source code for the Springboot gRPC API 
-`Art` is where you will find images and raw art files
-`Website` is where you will find the static website
+`API` is where you will find additional API documentation and the source code for the Springboot gRPC API   
+`Art` is where you will find images and raw art files  
+`Website` is where you will find the static website  
 `Notes` are just notes!
 
 ### Prerequisites
