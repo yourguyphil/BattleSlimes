@@ -1,0 +1,16 @@
+---
+apiVersion: "v1"
+kind: "Service"
+metadata:
+  name: "battleslimes-service"
+  namespace: "default"
+  labels:
+    app: "battleslimes"
+spec:
+  ports:
+    - protocol: "TCP"
+      port: 80
+  selector:
+    app: "battleslimes"
+  type: "LoadBalancer"
+  loadBalancerIP: ""

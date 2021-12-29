@@ -1,0 +1,41 @@
+---
+apiVersion: "apps/v1"
+kind: "Deployment"
+metadata:
+  name: "battleslimes"
+  namespace: "default"
+  labels:
+    app: "battleslimes"
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: "battleslimes"
+  template:
+    metadata:
+      labels:
+        app: "battleslimes"
+    spec:
+      containers:
+        - name: "battleslimes-sha256-1"
+          image: "gcr.io/battleslimes/battleslimes@sha256:a698e97cda5de15b9c83c0477e3e2edd7536862130df583ccd014250db9ec408"
+---
+apiVersion: "autoscaling/v2beta1"
+kind: "HorizontalPodAutoscaler"
+metadata:
+  name: "battleslimes-hpa-talo"
+  namespace: "default"
+  labels:
+    app: "battleslimes"
+spec:
+  scaleTargetRef:
+    kind: "Deployment"
+    name: "battleslimes"
+    apiVersion: "apps/v1"
+  minReplicas: 1
+  maxReplicas: 5
+  metrics:
+    - type: "Resource"
+      resource:
+        name: "cpu"
+        targetAverageUtilization: 80

@@ -1,12 +1,14 @@
 package com.battleslimes.battleslimes.services;
 
 import com.battleslimes.battleslimes.db.MongoDBConnection;
+import com.battleslimes.battleslimes.util.Constants;
 import com.battleslimes.battleslimes.util.Converters;
 import com.battleslimes.battleslimes.util.Verification;
 import com.mongodb.client.MongoCursor;
 import lombok.extern.slf4j.Slf4j;
 import org.bson.Document;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import static com.mongodb.client.model.Filters.eq;
@@ -20,11 +22,15 @@ public class BattleSlimeService {
     @Autowired
     private MongoDBConnection mongoDBConnection;
 
-    public BattleSlimes.SlimeCollection getAllSlimes() {
+    @Value("${mongo.connectionUri}")
+    private String mongoDBConnectionString;
 
+    public BattleSlimes.SlimeCollection getAllSlimes() {
         var slimeCollectionBuilder = BattleSlimes.SlimeCollection.newBuilder();
 
         try {
+            getNewMongoConnecton();
+
             MongoCursor<Document> cursor = mongoDBConnection.getSlimesCollection().find().iterator();
             while (cursor.hasNext()) {
                 Document documentOn = cursor.next();
@@ -32,32 +38,30 @@ public class BattleSlimeService {
                 slimeCollectionBuilder.addSlimes(currentSlime);
             }
         } catch (Exception e) {
-            log.error("Exception Caught while populating SlimeCollection:" + e);
+            log.error(Constants.ERROR_PREFIX + "Exception Caught while populating SlimeCollection: " + e);
         }
 
         return slimeCollectionBuilder.build();
     }
 
-    //Unit Testable
-    private String getStringValueDefaultEmpty(Document document, String keyName) {
-        var value = document.get(keyName);
-
-        if (value == null) {
-            log.error(keyName + " in slime document: " + document.getObjectId("_id").toHexString());
-        }
-
-        return String.valueOf(value);
-    }
-
     public BattleSlimes.Slime getSlime(String collector_number) throws Exception {
-        int lengthOfValidInput = 4;
 
-        if (!Verification.isValidInputString(collector_number, lengthOfValidInput)) {
-            throw new Exception("Invalid collector_number: A collector_number is a number of max length " + lengthOfValidInput);
+        BattleSlimes.Slime returnSlime = null;
+
+        try {
+            getNewMongoConnecton();
+            int lengthOfValidInput = 4;
+
+            if (!Verification.isValidInputString(collector_number, lengthOfValidInput)) {
+                throw new Exception("Invalid collector_number: A collector_number is a number of max length " + lengthOfValidInput);
+            }
+
+            var documentFound = (Document) mongoDBConnection.getSlimesCollection().find(eq("collector_number", collector_number)).first();
+            returnSlime = Converters.documentToSlime(documentFound);
+
+        } catch(Exception e) {
+            log.error(Constants.ERROR_PREFIX + "Exception caught in getSlime: " + e);
         }
-
-        var documentFound = (Document) mongoDBConnection.getSlimesCollection().find(eq("collector_number", collector_number)).first();
-        BattleSlimes.Slime returnSlime = Converters.documentToSlime(documentFound);
 
         return returnSlime;
     }
@@ -69,5 +73,13 @@ public class BattleSlimeService {
         int int_random = rand.nextInt(upperbound + 1);
 
         return getSlime(String.valueOf(int_random));
+    }
+
+
+    // Really ugly workaround to the mongoDB time out.
+    // We will just generate a connection each time
+    // More info about this solution https://stackoverflow.com/questions/52577486/how-to-avoid-an-exception-prematurely-reached-end-of-stream-using-mongodb-java-d
+    private void getNewMongoConnecton() {
+        this.mongoDBConnection = new MongoDBConnection(mongoDBConnectionString);
     }
 }
