@@ -14,13 +14,19 @@
     <a href="https://www.battleslimes.com/"><strong>Website Link</strong></a>
     <br />
     <br />
-    <a href="https://www.battleslimes.com/">API Documentation (Comming Soon!)</a>
+    <a href="https://storage.googleapis.com/battleslimes_bucket/grpc.html">API Endpoint Documentation (gRPC)</a>
+    ·
+    <a href="https://storage.googleapis.com/battleslimes_bucket/swagger.html">API Endpoint Documentation (REST)</a>
     ·
     <a href="https://opensea.io/collection/battleslimes">Opensea Collection</a>
     ·
     <a href="https://discord.gg/Rn2pCZF6DM">Discord</a>
     ·
     <a href="https://twitter.com/BattleSlimes">Twitter</a>
+    ·
+    <a href="https://www.instagram.com/battleslimesofficial/">Instagram</a>
+    ·
+    <a href="https://www.facebook.com/BattleSlimes-100147072549956">Facebook</a>
   </p>
 </div>
 
