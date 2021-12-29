@@ -60,7 +60,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-Pixel Art, Crypto, API development/design, Coding, GCP, Gaming combine into this project. 
+Pixel Art, Crypto, API development/design, Coding, GCP, and Gaming OH MY!
 
 Features:
 * Hand drawn pixel art of ADORABLE slime characters!
