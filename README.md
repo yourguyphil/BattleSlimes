@@ -24,7 +24,9 @@
   </p>
 </div>
 
-![Product Name Screen Shot](https://github.com/yourguyphil/BattleSlimes/blob/main/Art/Socials/BannerBlownupOpenSea.png)
+<p align="center">
+  <img src="https://github.com/yourguyphil/BattleSlimes/blob/main/Art/Socials/BannerBlownupOpenSea.png" />
+</p>
 
 <!-- TABLE OF CONTENTS -->
 <details>
