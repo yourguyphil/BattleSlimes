@@ -106,10 +106,35 @@ COMMING SOON!
 
 
 
-## Usage
+## API Usage
 
 
-COMMING SOON!
+**Exmaple Request: BattleSlimeService.GetSlime**
+
+Raw Request 
+```
+{
+  "collectorNumber": "1"
+}
+```
+
+grpcui -plaintext battleslimes-api.com:80
+
+<p align="center">
+  <img src="https://github.com/yourguyphil/BattleSlimes/blob/main/API/battleslimes/notes/GetSlimegRPCExample.PNG" />
+</p>
+
+Raw Response
+```
+{
+  "collector_number": "1",
+  "name": "Blu",
+  "description": "",
+  "metadata": "",
+  "picture": "https://storage.googleapis.com/battleslimes_bucket/assets/images/slimecollection/BattleSlime1.svg",
+  "opensea_url": "https://opensea.io/assets/0x495f947276749ce646f68ac8c248420045cb7b5e/38702784988183345035410978490421897305681563005849230365966878050034284232705"
+}
+```
 
 
 ## Roadmap
