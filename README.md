@@ -5,6 +5,10 @@
   <h3 align="center">Welcome to BattleSlimes!</h3>
 
   <p align="center">
+    <img src="https://github.com/yourguyphil/BattleSlimes/blob/main/Art/Socials/BannerBlownupOpenSea.png" />
+  </p>
+
+  <p align="center">
     An NFT Monster collecting game. Collect, Trade, BATTLE!
     <br />
     <a href="https://www.battleslimes.com/"><strong>Website Link</strong></a>
@@ -25,10 +29,6 @@
     <a href="https://www.facebook.com/BattleSlimes-100147072549956">Facebook</a>
   </p>
 </div>
-
-<p align="center">
-  <img src="https://github.com/yourguyphil/BattleSlimes/blob/main/Art/Socials/BannerBlownupOpenSea.png" />
-</p>
 
 <!-- TABLE OF CONTENTS -->
 <details>
