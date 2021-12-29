@@ -2,10 +2,6 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/yourguyphil/BattleSlimes/blob/main/Art/Socials/Logo.png">
-    <img src="https://github.com/yourguyphil/BattleSlimes/blob/main/Art/Socials/Logo.png" alt="Logo" width="80" height="80">
-  </a>
-
   <h3 align="center">Welcome to BattleSlimes!</h3>
 
   <p align="center">
