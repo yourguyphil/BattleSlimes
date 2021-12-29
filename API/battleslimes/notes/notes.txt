@@ -1,0 +1,15 @@
+General Deployment Guide:
+
+- Build the Java Jar 
+- Create Docker image (battleslimes)
+- Tag image to container (gcr.io/battleslimes/battleslimes)
+- Push container to Google Container Registry
+- Create Google Kubernetes Engine Instance
+- Deploy created container to GKE instance
+- Modify config values to match use
+
+
+Setup:
+
+- Create Load Balancer + Ingress, port foreward to gRPC port
+- Whitelist GKE ports to MongoDB atlas 

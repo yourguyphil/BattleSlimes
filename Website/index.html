@@ -20,9 +20,6 @@
     <header id="site-header" class="fixed-top">
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light">
-                <!-- Big Logo -->
-                <a class="navbar-brand" href="home">BattleSlimes</a>
-                <!-- Big Logo End -->
                 <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -38,10 +35,18 @@
                             <a class="nav-link" href="https://opensea.io/collection/battleslimes">Market</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="https://swagger.io/">API</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link" href="https://discord.gg/Rn2pCZF6DM">Community</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                API <i class="fas fa-angle-down"></i>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                                <li><a class="dropdown-item" href="https://github.com/yourguyphil/BattleSlimes">Github</a></li>
+                                <li><a class="dropdown-item" href="https://storage.googleapis.com/battleslimes_bucket/grpc.html">gRPC Docs</a></li>
+                                <li><a class="dropdown-item" href="https://storage.googleapis.com/battleslimes_bucket/swagger.html">Swagger Docs</a></li>
+                            </ul>
                         </li>
                     </ul>
                 </div>
