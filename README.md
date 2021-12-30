@@ -99,12 +99,9 @@ Just some notable highlights!
 Java 17
 grpcui/grpcurl
 
-### Installation
+You can call the gRPC or REST API through `batleslimes-api.com` or use the Docker image/build yourself locally (Both of these require the credentials to connect to the DB). 
 
-
-COMMING SOON!
-
-
+https://hub.docker.com/repository/docker/yourguyphil/battleslimes
 
 ## API Usage
 

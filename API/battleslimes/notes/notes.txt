@@ -8,6 +8,11 @@ General Deployment Guide:
 - Deploy created container to GKE instance
 - Modify config values to match use
 
+```
+docker build -t battleslimes .
+docker tag battleslimes gcr.io/battleslimes/battleslimes
+docker push gcr.io/battleslimes/battleslimes
+```
 
 Setup:
 

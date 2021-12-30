@@ -9,10 +9,6 @@ grpcui -proto BattleSlimes.proto -plaintext localhost:9090
 
 # Calling the service on server
 
-`grpcui -plaintext 35.239.184.105:80`
-
-or
-
 `grpcui -plaintext battleslimes-api.com:80`
 
 or
