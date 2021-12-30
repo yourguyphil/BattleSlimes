@@ -29,3 +29,6 @@ OpenAPI docs: https://www.npmjs.com/package/protobuf2swagger
 (Use the config file in `/documentation`)
 
 gcloud endpoints services deploy swagger.yml
+
+
+https://github.com/yourguyphil/BattleSlimes/blob/main/API/battleslimes/notes/GetSlimegRPCExample.PNG
