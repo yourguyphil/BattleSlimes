@@ -2,11 +2,11 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/yourguyphil/BattleSlimes/blob/main/Art/Socials/Logo.png">
-    <img src="https://github.com/yourguyphil/BattleSlimes/blob/main/Art/Socials/Logo.png" alt="Logo" width="80" height="80">
-  </a>
-
   <h3 align="center">Welcome to BattleSlimes!</h3>
+
+  <p align="center">
+    <img src="https://github.com/yourguyphil/BattleSlimes/blob/main/Art/Socials/BannerBlownupOpenSea.png" />
+  </p>
 
   <p align="center">
     An NFT Monster collecting game. Collect, Trade, BATTLE!
@@ -29,10 +29,6 @@
     <a href="https://www.facebook.com/BattleSlimes-100147072549956">Facebook</a>
   </p>
 </div>
-
-<p align="center">
-  <img src="https://github.com/yourguyphil/BattleSlimes/blob/main/Art/Socials/BannerBlownupOpenSea.png" />
-</p>
 
 <!-- TABLE OF CONTENTS -->
 <details>
@@ -64,7 +60,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-Pixel Art, Crypto, API development/design, Coding, GCP, Gaming combine into this project. 
+Pixel Art, Crypto, API development/design, Coding, GCP, and Gaming OH MY!
 
 Features:
 * Hand drawn pixel art of ADORABLE slime characters!
@@ -93,9 +89,9 @@ Just some notable highlights!
 <!-- GETTING STARTED -->
 ## Getting Started
 
-`API` is where you will find additional API documentation and the source code for the Springboot gRPC API 
-`Art` is where you will find images and raw art files
-`Website` is where you will find the static website
+`API` is where you will find additional API documentation and the source code for the Springboot gRPC API   
+`Art` is where you will find images and raw art files  
+`Website` is where you will find the static website  
 `Notes` are just notes!
 
 ### Prerequisites
@@ -110,10 +106,35 @@ COMMING SOON!
 
 
 
-## Usage
+## API Usage
 
 
-COMMING SOON!
+**Exmaple Request: BattleSlimeService.GetSlime**
+
+Raw Request 
+```
+{
+  "collectorNumber": "1"
+}
+```
+
+grpcui -plaintext battleslimes-api.com:80
+
+<p align="center">
+  <img src="https://github.com/yourguyphil/BattleSlimes/blob/main/API/battleslimes/notes/GetSlimegRPCExample.PNG" />
+</p>
+
+Raw Response
+```
+{
+  "collector_number": "1",
+  "name": "Blu",
+  "description": "",
+  "metadata": "",
+  "picture": "https://storage.googleapis.com/battleslimes_bucket/assets/images/slimecollection/BattleSlime1.svg",
+  "opensea_url": "https://opensea.io/assets/0x495f947276749ce646f68ac8c248420045cb7b5e/38702784988183345035410978490421897305681563005849230365966878050034284232705"
+}
+```
 
 
 ## Roadmap
