@@ -7,17 +7,36 @@ Navigate to the protos directory
 Local:
 grpcui -proto BattleSlimes.proto -plaintext localhost:9090
 
-# Calling the service on server
+# Calling the service on server using gRPC
 
-`grpcui -plaintext battleslimes-api.com:80`
+use uri + port
+
+`battleslimes-api.com:90`
+
+so...
+
+`grpcui -plaintext 35.239.184.105:90`
 
 or
 
-`grpcui -plaintext echo-api.endpoints.battleslimes.cloud.goog:80`
+`grpcui -plaintext battleslimes-api.com:90`
+
+or
+
+`grpcui -plaintext echo-api.endpoints.battleslimes.cloud.goog:90`
+
+# Calling the service on server using REST
+
+use uri + port (port is not needed since it is 80)
+
+`battleslimes-api.com:80`
+
+`35.239.184.105:80`
+
 
 ## Exmaple Request: BattleSlimeService.GetSlimes
 
-grpcui -plaintext battleslimes-api.com:80
+grpcui -plaintext battleslimes-api.com:90
 
 <p align="center">
   <img src="https://github.com/yourguyphil/BattleSlimes/blob/main/API/battleslimes/notes/GetSlimesgRPCExample.PNG" />
@@ -240,7 +259,7 @@ Raw Request
 }
 ```
 
-grpcui -plaintext battleslimes-api.com:80
+grpcui -plaintext battleslimes-api.com:90
 
 <p align="center">
   <img src="https://github.com/yourguyphil/BattleSlimes/blob/main/API/battleslimes/notes/GetSlimegRPCExample.PNG" />

@@ -115,7 +115,7 @@ Raw Request
 }
 ```
 
-grpcui -plaintext battleslimes-api.com:80
+grpcui -plaintext battleslimes-api.com:90
 
 <p align="center">
   <img src="https://github.com/yourguyphil/BattleSlimes/blob/main/API/battleslimes/notes/GetSlimegRPCExample.PNG" />
