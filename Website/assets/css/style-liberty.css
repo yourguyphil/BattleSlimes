@@ -22240,9 +22240,47 @@ h5.texti {
   animation: play 1.0s steps(4) infinite;
   display: inline-block;
 }
+.gg-sun, .gg-moon{
+  margin-left: 30px;
+}
+
+#animation1 {
+  width: 384px;
+  height: 400px;
+  background: url('../images/AnimatedMascot-Sheet.svg') left center;
+  background-size: cover;
+  animation: play1 1.0s steps(4) infinite;
+  display: inline-block;
+}
+
+@keyframes play1 {
+  100% {background-position: -1520px;}
+}
 
 @keyframes play {
-  100% {background-position: -1920px;}
+  100% {background-position: -1536px;}
 }
 
 /* //shortcodes page */
+
+.mobile{
+    display:none;
+}
+
+@media only screen and (max-width: 767px) {
+ 
+.mobile{
+    display:initial;
+}
+
+.desktop{
+    display:none;
+}
+  .mb-text-center{
+    text-align: center;
+  }
+  .w3l-banner {
+    
+    background-size: cover;
+}
+}
