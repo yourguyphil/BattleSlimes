@@ -115,7 +115,7 @@ grpcui -plaintext battleslimes-api.com:90
   <img src="https://github.com/yourguyphil/BattleSlimes/blob/main/API/battleslimes/documentation/Demo/gRPCGetSlimes.PNG" />
 </p>
 
-**Example HTTP Request: BattleSlimeService.GetSlime**
+**Example HTTP Request: BattleSlimeService.GetSlimes**
 
 GET battleslimes-api.com/v1/slimes
 
