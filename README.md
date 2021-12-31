@@ -98,8 +98,7 @@ Just some notable highlights!
 
 ### Prerequisites
 
-Java 17
-grpcui/grpcurl
+Java 17  
 
 You can call the gRPC or REST API through `batleslimes-api.com` or use the Docker image/build yourself locally (Both of these require the credentials to connect to the DB). 
 
