@@ -16,7 +16,9 @@
     <br />
     <a href="https://storage.googleapis.com/battleslimes_bucket/grpc.html">API Endpoint Documentation (gRPC)</a>
     ·
-    <a href="https://storage.googleapis.com/battleslimes_bucket/swagger.html">API Endpoint Documentation (REST)</a>
+    <a href="https://storage.googleapis.com/battleslimes_bucket/rest.html">API Endpoint Documentation (REST)</a>
+    ·
+    <a href="https://endpointsportal.battleslimes.cloud.goog/">Endpoints Portal</a>
     ·
     <a href="https://opensea.io/collection/battleslimes">Opensea Collection</a>
     ·
@@ -105,34 +107,24 @@ https://hub.docker.com/repository/docker/yourguyphil/battleslimes
 
 ## API Usage
 
-
-**Exmaple Request: BattleSlimeService.GetSlime**
-
-Raw Request 
-```
-{
-  "collectorNumber": "1"
-}
-```
+**Example gRPC Request: BattleSlimeService.GetSlimes**
 
 grpcui -plaintext battleslimes-api.com:90
 
 <p align="center">
-  <img src="https://github.com/yourguyphil/BattleSlimes/blob/main/API/battleslimes/notes/GetSlimegRPCExample.PNG" />
+  <img src="https://github.com/yourguyphil/BattleSlimes/blob/main/API/battleslimes/documentation/Demo/gRPCGetSlimes.PNG" />
 </p>
 
-Raw Response
-```
-{
-  "collector_number": "1",
-  "name": "Blu",
-  "description": "",
-  "metadata": "",
-  "picture": "https://storage.googleapis.com/battleslimes_bucket/assets/images/slimecollection/BattleSlime1.svg",
-  "opensea_url": "https://opensea.io/assets/0x495f947276749ce646f68ac8c248420045cb7b5e/38702784988183345035410978490421897305681563005849230365966878050034284232705"
-}
-```
+**Example HTTP Request: BattleSlimeService.GetSlime**
 
+GET battleslimes-api.com/v1/slimes
+
+<p align="center">
+  <img src="https://github.com/yourguyphil/BattleSlimes/blob/main/API/battleslimes/documentation/Demo/RestGetSlimes.PNG" />
+</p>
+
+Notice that the gRPC request is **35%** Faster than the HTTP request!  
+Please see the README in the API/battleslimes directory for more detailed documentation.  
 
 ## Roadmap
 
