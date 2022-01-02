@@ -9,10 +9,10 @@ public class Verification {
     }
 
     public static boolean isValidInputString(String possibleValidInputString, int stringLength) {
-        String regexForMatchingANumber = "/^([a-zA-Z0-9_-]){1," + stringLength + "}$/";
+        String regexForMatchingANumber = "^([a-zA-Z0-9_-]){1," + stringLength + "}$";
 
-        boolean b2 = Pattern.compile(regexForMatchingANumber).matcher(possibleValidInputString).matches();
+        boolean isValid = Pattern.compile(regexForMatchingANumber).matcher(possibleValidInputString).matches();
 
-        return true;
+        return isValid;
     }
 }
