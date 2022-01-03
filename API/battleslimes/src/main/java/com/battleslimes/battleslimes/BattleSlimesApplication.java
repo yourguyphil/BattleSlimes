@@ -21,7 +21,7 @@ public class BattleSlimesApplication {
 		log.info(" |    |   \\ / __ \\|  |  |  | |  |_\\  ___/ /        \\|  |_|  |  Y Y  \\  ___/ \\___ \\ ");
 		log.info(" |______  /(____  /__|  |__| |____/\\___  >_______  /|____/__|__|_|  /\\___  >____  >");
 		log.info("        \\/      \\/                     \\/        \\/               \\/     \\/     \\/");
-		log.info("BattleSlimes Service has successfully started!!! *Version: 1.1*");
+		log.info("BattleSlimes Service has successfully started!!! *Version: 1.2*");
 	}
 
 }

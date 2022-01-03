@@ -52,8 +52,8 @@ public class BattleSlimeService {
             getNewMongoConnecton();
             int lengthOfValidInput = 4;
 
-            if (!Verification.isValidInputString(collector_number, lengthOfValidInput)) {
-                throw new Exception("Invalid collector_number: A collector_number is a number of max length " + lengthOfValidInput);
+            if (!Verification.verifyCollector_Id(collector_number)) {
+                throw new Exception("Invalid collector_number: A collector_number is a number of max length 4");
             }
 
             var documentFound = (Document) mongoDBConnection.getSlimesCollection().find(eq("collector_number", collector_number)).first();
