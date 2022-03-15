@@ -4,7 +4,7 @@ name: Google Cloud Storage Bucket Static Website Deploy
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
-    branches: [ main ][ feature/cicd-frontend ]
+    branches: [ feature/cicd-frontend ]
   pull_request:
     branches: [ main ]
 
