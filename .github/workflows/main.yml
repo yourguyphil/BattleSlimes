@@ -1,4 +1,4 @@
-name: Google Cloud Storage Bucket Static Website Deploy
+name: Static Website Deploy (Google Cloud Storage Bucket)
 
 # Controls when the workflow will run
 on:
@@ -25,4 +25,6 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: List Static Website Files
-        run: echo Hello, world!
+        run: |
+          echo Listing Static Website Files!
+          echo Listing Finished!
