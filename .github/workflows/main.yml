@@ -26,6 +26,6 @@ jobs:
       # Runs a single command using the runners shell
       - name: List Static Website Files
         run: |
-        echo Listing Static Website Files
+        echo "Listing Static Website Files"
         cd Website
         ls
