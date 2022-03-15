@@ -27,5 +27,6 @@ jobs:
       - name: List Static Website Files
         run: |
           echo Listing Static Website Files!
+          cd Website
           ls
           echo Listing Finished!
