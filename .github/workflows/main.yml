@@ -1,12 +1,10 @@
-# This is a basic workflow to help you get started with Actions
-
-name: CI
+name: Google Cloud Storage Bucket Static Website Deploy
 
 # Controls when the workflow will run
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
-    branches: [ main ]
+    branches: [ main ][ feature/cicd-frontend ]
   pull_request:
     branches: [ main ]
 
@@ -26,11 +24,8 @@ jobs:
       - uses: actions/checkout@v2
 
       # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
-
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
+      - name: List Static Website Files
         run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+        echo Listing Static Website Files!
+        cd Website
+        ls
