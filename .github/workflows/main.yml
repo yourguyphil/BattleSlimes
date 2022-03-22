@@ -1,32 +1,35 @@
 name: Static Website Deploy (Google Cloud Storage Bucket)
 
-# Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the main branch
   push:
     branches: [ feature/cicd-frontend ]
   pull_request:
     branches: [ main ]
-
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
-
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
-jobs:
-  # This workflow contains a single job called "build"
-  build:
-    # The type of runner that the job will run on
+jobs:  
+  List_Static_Files:
     runs-on: ubuntu-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
-      # Runs a single command using the runners shell
       - name: List Static Website Files
         run: |
           echo Listing Static Website Files!
           cd Website
           ls
           echo Listing Finished!
+  Upload_to_Google_Cloud_Storage:
+    runs-on: ubuntu-latest
+    steps:
+    - id: 'auth'
+      uses: 'google-github-actions/auth@v0'
+      with:
+        #TODO: https://cloud.google.com/blog/products/identity-security/enabling-keyless-authentication-from-github-actions
+        workload_identity_provider: 'projects/123456789/locations/global/workloadIdentityPools/my-pool/providers/my-provider'
+        service_account: 'battleslimescicd@battleslimes.iam.gserviceaccount.com'
+    - id: 'upload-file'
+      uses: 'google-github-actions/upload-cloud-storage@v0'
+      with:
+        path: '/Website/index.html'
+        destination: 'battleslimes_bucket/home'
